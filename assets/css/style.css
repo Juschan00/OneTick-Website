@@ -1475,6 +1475,146 @@ button.chip:hover {
   background: var(--c, var(--text));
 }
 
+/* Pomodoro card ----------------------------------------------------------- */
+
+.pomo-demo {
+  display: grid;
+  gap: 16px;
+}
+
+.island {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  background: #000;
+  border: 1px solid var(--line);
+  font-size: 0.85rem;
+}
+
+.island-ring {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  border-radius: 50%;
+  background: conic-gradient(var(--brand-bright) 0 62%, rgba(255, 255, 255, 0.14) 62% 100%);
+  -webkit-mask: radial-gradient(circle, transparent 0 5px, #000 5.5px);
+  mask: radial-gradient(circle, transparent 0 5px, #000 5.5px);
+}
+
+.island-label {
+  color: var(--text-2);
+}
+
+.island-time {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.island-pause {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--brand-tint);
+  color: var(--brand-bright);
+}
+
+.island-pause .icon {
+  width: 13px;
+  height: 13px;
+}
+
+.pomo-sessions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pomo-sessions span {
+  width: 26px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.pomo-sessions .done {
+  background: var(--brand);
+}
+
+.pomo-sessions .now {
+  background: linear-gradient(90deg, var(--brand-bright) 0 55%, rgba(255, 255, 255, 0.14) 55%);
+}
+
+.pomo-sessions small {
+  margin-left: 6px;
+  color: var(--text-3);
+  font-size: 0.78rem;
+}
+
+/* Car location card ------------------------------------------------------- */
+
+.car-demo {
+  display: grid;
+  gap: 12px;
+}
+
+.car-map {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 112px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  background:
+    linear-gradient(transparent 49%, rgba(255, 255, 255, 0.05) 49% 51%, transparent 51%) 0 0 / 100% 28px,
+    linear-gradient(90deg, transparent 49%, rgba(255, 255, 255, 0.05) 49% 51%, transparent 51%) 0 0 / 34px 100%,
+    radial-gradient(120% 90% at 50% 0%, rgba(31, 175, 95, 0.16), transparent 70%),
+    var(--app-bg);
+}
+
+.car-pin {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--brand);
+  color: #04130c;
+  box-shadow: 0 0 0 8px rgba(31, 175, 95, 0.16);
+}
+
+.car-pin .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.car-where {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid var(--line);
+  font-size: 0.76rem;
+  color: var(--text-2);
+  text-align: center;
+}
+
+.car-demo .chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 .notif {
   display: flex;
   gap: 12px;
